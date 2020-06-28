@@ -3,7 +3,7 @@ node('docker') {
         git credentialsId: 'varam_github', url: 'https://github.com/Varalakshmi13/studentapp.git'
     }
     stage("package and Deploy to nexus"){  
-        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'NEXUS-STUDENT_USER',
+        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'nexus_credentials',
 usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
 
                 sh '''
