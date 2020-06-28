@@ -5,7 +5,7 @@ node('docker') {
     stage('packaging'){
         sh 'mvn clean package'
     }
-    stage("Deploy to nexus"){
+    /*stage("Deploy to nexus"){
         sh 'mvn deploy -DNEXUS_USERNAME=admin -DNEXUS_PASSWORD=admin123'
-    }
+    }*/
 }
