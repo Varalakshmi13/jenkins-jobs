@@ -6,7 +6,7 @@ node('docker') {
         sh '''
         mvn clean
         cp settings.xml ~/.m2/settings.xml
-        mvn clean package deploy -DNEXUS_USERNAME=admin -DNEXUS_PASSWORD=Devops@139'
+        mvn clean package deploy -DNEXUS_USERNAME=admin -DNEXUS_PASSWORD=Devops@139
         '''
     }
 }
