@@ -6,6 +6,7 @@ node('docker') {
         sh 'mvn clean package'
     }
     stage("Deploy to nexus"){
+        cp settings.xml ~/.m2/settings.xml
         sh 'mvn deploy -DNEXUS_USERNAME=admin -DNEXUS_PASSWORD=Devops@139'
     }
 }
