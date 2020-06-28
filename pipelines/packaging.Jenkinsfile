@@ -4,7 +4,7 @@ node('docker') {
     }
     stage("package and Deploy to nexus"){  
         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'nexus_credentials',
-usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+        usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
 
                 sh '''
                 mvn clean
