@@ -4,7 +4,6 @@ node('docker'){
     }
     stage('Code-quality'){
         sh 'mvn code compile'
-         sh 'mvn clean compile sonar:sonar \
-            -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://172.31.78.93:9000   -Dsonar.login=28369e7a1feb33af5681b604b20dbf791321a0c4'
+         sh 'mvn clean compile sonar:sonar -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://172.31.78.93:9000   -Dsonar.login=28369e7a1feb33af5681b604b20dbf791321a0c4'
     }
 }
