@@ -5,4 +5,7 @@ node('docker') {
     stage('packaging'){
         sh 'mvn clean package'
     }
+    stage("Deploy to nexus"){
+        sh 'mvn deploy'
+    }
 }
